@@ -15,7 +15,8 @@ veiculos <- c(188, 272, 170, 256, 204, 248, 256, 233, 178, 175, 168, 166)
 Instalar e executar bibliotecas
 
 install.packages("zoo")
-library(zoo)
+library(zoo)![Média Móvel]
+
 media_movel <- rollmean(veiculos, k = 3, align = "right", fill = NA)
 
 Plotagem 
@@ -24,3 +25,6 @@ plot(dias, veiculos, type = "l", ylim = c(0, max(veiculos, media_movel, na.rm = 
      xlab = "Dia", ylab = "Número de Veículos", main = "Média Móvel de 3 dias")
 lines(dias, media_movel, col = "red")
 legend("topleft", legend = c("Veículos", "Média Móvel"), col = c("black", "red"), lty = 1)
+
+Gráfico
+(https://github.com/glaysonbk/Media_movel/assets/100309646/14df7845-cae2-461d-aba1-df8555ae0132)
